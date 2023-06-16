@@ -12,6 +12,14 @@ void main() {
       appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: kTodoColorScheme.onPrimaryContainer,
           foregroundColor: kTodoColorScheme.primaryContainer),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom().copyWith(
+            backgroundColor: MaterialStatePropertyAll<Color>(
+              kTodoColorScheme.onPrimaryContainer,
+            ),
+            foregroundColor:
+                MaterialStatePropertyAll(kTodoColorScheme.secondaryContainer)),
+      ),
     ),
     home: const Todos(),
   ));
